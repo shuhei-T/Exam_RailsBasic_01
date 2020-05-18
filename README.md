@@ -15,7 +15,6 @@ $ rails server
 
 ## テスト実行
 ```
-$ rails test
 $ rails test:system
 ```
 
