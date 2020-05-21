@@ -4,7 +4,7 @@
 
 ## 環境構築
 ```
-$ git checkout -b fix_basic-login
+$ git checkout -b fix_[自分のアカウント名]
 $ rbenv local 2.6.6
 $ nodenv local 12.14.0
 $ bundle install --without production
