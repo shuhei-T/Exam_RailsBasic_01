@@ -18,3 +18,5 @@ $ rails server
 $ rails test:system
 ```
 
+## 注意点
+- 作成したPullRequestはmasterブランチにマージしないで残しておいてください。（課題が直ってしまうので）
