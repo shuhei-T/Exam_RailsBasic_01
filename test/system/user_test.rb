@@ -3,12 +3,16 @@ require "application_system_test_case"
 
 class UserTest < ApplicationSystemTestCase
   # switch to display Browser
-  driven_by :selenium, using: :headless_chrome
-  # driven_by :selenium, using: :chrome
+  # driven_by :selenium, using: :headless_chrome
+  driven_by :selenium, using: :chrome
 
   def setup
     @user = User.create(name: "Example User", email: "user@example.com",
                      password: "foobar", password_confirmation: "foobar")
+  end
+
+  test "signup failed with invalid user" do
+    # TODO: この行を記入してください
   end
 
   test "login success with exist user" do
