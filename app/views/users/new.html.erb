@@ -6,10 +6,7 @@
     <%= form_with(model: @user, local: true) do |f| %>
       <%= render 'shared/error_messages' %>
 
-      <%= f.label :first_name %>
-      <%= f.text_field :name, class: 'form-control' %>
-
-      <%= f.label :last_name %>
+      <%= f.label :name %>
       <%= f.text_field :name, class: 'form-control' %>
 
       <%= f.label :email %>

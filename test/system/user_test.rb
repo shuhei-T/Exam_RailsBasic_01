@@ -10,9 +10,17 @@ class UserTest < ApplicationSystemTestCase
     @user = User.create(name: "Example User", email: "user@example.com",
                      password: "foobar", password_confirmation: "foobar")
   end
-
+# 名前が未入力のケースを想定
   test "signup failed with invalid user" do
-    # TODO: この行を記入してください
+    visit signup_url
+    fill_in "Name", with: nil
+    fill_in "Email", with: "invalid_user@example.com"
+    fill_in "Password", with: "foobar"
+    fill_in "Confirmation", with: "foobar"
+    click_button "Create my account"
+    assert_no_text "Signup success!"
+    assert_text "The form contains 1 error."
+    assert_text "Name can't be blank"
   end
 
   test "login success with exist user" do
